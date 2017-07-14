@@ -16,7 +16,18 @@ x = {1.5,'one point five'};
 As you can probably tell from above, MATLAB separates numbers and letters.
 Cell type can hold basically anything. It's the most useful thing ever. 
 You can use cell to hold numbers, labels, whatever.
+Indexing cell types is a bit different than normal. 
+Normally you would use:
 %}
+
+x(1,1)
+
+%{
+But with cell types, you have to use the curly brackets instead.
+Otherwise, MATLAB will not recognize you're indexing a cell.
+%}
+
+x{1,1}
 
 %"Yo, I heard MATLAB works with matrices!!!"
 
