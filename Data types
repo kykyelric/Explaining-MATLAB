@@ -1,0 +1,52 @@
+%{
+MATLAB is very finicky with data types. 
+If you aren't using the correct type, it will blast you with annoying errors. 
+%}
+
+%Common data types:
+
+%Double 
+x = 1.5;
+%String
+x = 'one point five';
+%Cell
+x = {1.5,'one point five'};
+
+%{
+As you can probably tell from above, MATLAB separates numbers and letters.
+Cell type can hold basically anything. It's the most useful thing ever. 
+You can use cell to hold numbers, labels, whatever.
+%}
+
+%"Yo, I heard MATLAB works with matrices!!!"
+
+%{
+You are most correct. Store your data in matrices to make the most of MATLAB. 
+If you only have one type of data, don't use cell, as it is harder to work with. 
+For example, create a matrix of zeros to work with numbers.
+%}
+
+A = zeros(1,4) %creates a 1x4 matrix of zeros
+
+%{
+You can also create a matrix of ones or a matrix with random numbers...
+There are tons of options. 
+You can even convert numbers to strings and strings to numbers if you want.
+%}
+
+x = 9;
+x = num2str(x);
+y = '9';
+y = str2num(y);
+
+%{
+However, in order to convert a cell, the easiest way is simply to not specify what kind of thing
+you want to convert it to, and let MATLAB decide what is best. Use:
+%}
+
+B = {1,2,3,4};
+B = cell2mat(B);
+
+%{
+In the above example, you'll receive a 1x4 matrix of double type. 
+%}
