@@ -1,0 +1,58 @@
+%Why would you want to use a function in MATLAB?
+%{
+Let's say you have an action you want to repeat over and over again. 
+You have the code written out. Yay! Good for you!
+However, something seems off. Coding is supposed to save you time on repetitive actions.
+Yet, you still are having to change your code a little every time, 
+depending on the things you're dealing with.
+How can you get rid of the human action? 
+After all, coding is SUPPOSED to do that for you, right? 
+Use functions!
+%}
+
+%What the hell is a function, anyway?
+%{
+A function does exactly what I explained above. 
+It takes your program and performs the code on whatever data you input. 
+This way, you can feed it a matrix or something and not worry about having to do anything.
+%}
+
+%{
+Of course, it's not that easy. 
+Let's go over how to use the MATLAB function.
+%}
+
+%Syntax:
+
+function [output1, output2] = name(input1, input2)
+%{
+Function description.
+%}
+Codeeeeeeeeee = 1;
+Coooooooode = 2;
+Coddde = 3;
+ouput1 = input1 * input2;
+output2 = Codeeeeeeeeee + Coooooooode + Coddde;
+end
+
+%{
+You can have as many inputs and outputs as you like, though do use all of them. 
+%}
+
+%How do you use this thing??
+%{
+After you've written your function, call it. 
+It took me forever to figure out how the hell I was supposed to call the function, so I'll tell you straight out.
+You literally just copy and paste the portion after 'function' into the command window.
+Literally just [output1, output2] = name(input1, input2) in the command window.
+That gives you the variables output1 and output 2 in your workspace with whatever values they were assigned in the function.
+Super easy! Super effective! OMG! 
+%}
+
+%Tips and tricks
+%{
+If you have just one variable for the function to change, you don't need to use the brackets. 
+output1 = name(input1, input2)
+or
+output1 = name(input1)
+%}
