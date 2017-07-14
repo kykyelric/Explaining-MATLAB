@@ -1,0 +1,61 @@
+%For vs While loops
+
+%{
+To be honest, I have no clue why MATLAB even uses both of them. 
+You can accomplish the same thing with both. 
+Regardless, here are the differences.
+%}
+
+%For loop
+%{
+The for loop requires you know how many loops to go through.
+Syntax:
+%}
+
+a = [];
+for x = 1:5
+  a(x) = 1 + x;
+end
+
+%{
+Something like that.
+The code will run through each x value from 1 to 5.
+You can also replace the integers with variables, like the length of a matrix.
+%}
+
+for x = 1:length(myData)
+  a(x) = 1 + x;
+end
+
+%While loop
+%{
+The while loop will run forever unless you specify it to stop.
+Syntax:
+%}
+
+x = 1;
+while x < 6
+  a(x) = 1 + x;
+  x = x + 1;
+end
+
+%{
+In the for loop, the x is just within that loop. 
+It doesn't affect the rest of the code outside the loop.
+In the while loop, the x is a variable in your code. 
+If you try to use x later, the x you used in the while loop will have the value that the while loops ends with.
+Also, please keep in mind that you will have an infinite loop on your hands if you aren't careful with while loops.
+Always have the MATLAB equivalent of Python's += unless you have a break somewhere. Like this:
+%}
+
+while x < 6
+  a(x) = 1 + x;
+  break
+end
+
+%{
+Though in this case, the break will cause the loop to not go through all the iterations you want it to.
+So, the main differences between for and while loops:
+1. For loops require you to know the number of iterations; while loops run until you tell it to stop.
+2. For loops do not save the counting variable (x in this case); while loops do.
+%}
